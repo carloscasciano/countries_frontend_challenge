@@ -5,6 +5,7 @@
 - axios calls graphql api
     - decision on over vs. underfetching
 - handles first store input
+-  dashboard component checks store current state to choose render
 
 
 

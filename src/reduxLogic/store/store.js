@@ -15,6 +15,7 @@ function countriesReducer(state = INITIAL_STATE, action) {
 
     case "FETCH_POSTS_FAILURE":
       state.mainStatus = action.error;
+      state.isFetching = false;
       return state;
 
     case "FETCH_POSTS_SUCCESS":

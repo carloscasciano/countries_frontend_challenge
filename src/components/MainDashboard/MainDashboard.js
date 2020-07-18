@@ -6,7 +6,6 @@ import CountryBasicInfoCard from "../CountryBasicInfoCard/CountryBasicInfoCard";
 export default function MainDashboard() {
   const countriesStatusData = useSelector((state) => state, [store]);
   const countriesAppData = countriesStatusData.countriesData;
-  console.log(countriesAppData);
 
   return (
     <div>

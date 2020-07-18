@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function CountryBasicInfoCard({ countryData }) {
   return (
@@ -10,6 +11,8 @@ export default function CountryBasicInfoCard({ countryData }) {
       />
       <p>{countryData.name}</p>
       <p>{countryData.capital}</p>
+      <Link to={countryData.name}>Details</Link>
+
     </div>
   );
 }

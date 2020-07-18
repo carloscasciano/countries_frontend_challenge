@@ -4,6 +4,9 @@
 
 - axios calls graphql api
     - decision on over vs. underfetching
+- handles first store input
+
+
 
 
 ##### Briefing

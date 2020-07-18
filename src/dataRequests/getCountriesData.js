@@ -1,7 +1,13 @@
+import store from "../reduxLogic/store/store";
+import {
+  fetchRequestsStart,
+  fetchRequestsError,
+  fetchSuccess,
+} from "../reduxLogic/actions/actions";
 const axios = require("axios");
 
 async function getCountriesData() {
-  console.log("start");
+  store.dispatch(fetchRequestsStart());
   await axios({
     url: "https://countries-274616.ew.r.appspot.com/",
     method: "post",
@@ -31,11 +37,11 @@ async function getCountriesData() {
     },
   })
     .catch(function (error) {
-      console.log(error);
+      store.dispatch(fetchRequestsError());
     })
     .then((result) => {
-      console.log(result.data.data.Country);
       console.log("completed");
+      store.dispatch(fetchSuccess(result.data.data.Country));
     });
 }
 

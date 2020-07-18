@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import MainDashboard from "./components/MainDashboard/MainDashboard";
-import CountryDetailsDashboard from "./components/CountryDetailsDashboard/CountryDetailsDashboard"
+import CountryDetailsDashboard from "./components/CountryDetailsDashboard/CountryDetailsDashboard";
 import { Provider } from "react-redux";
 import store from "./reduxLogic/store/store";
 import { getCountriesData } from "./dataRequests/getCountriesData";
@@ -15,8 +15,8 @@ function App() {
     <Provider store={store}>
       <Router>
         <Switch>
-        <Route path="/:name">
-            <CountryDetailsDashboard/>
+          <Route path="/:name">
+            <CountryDetailsDashboard />
           </Route>
           <Route path="/">
             <MainDashboard />

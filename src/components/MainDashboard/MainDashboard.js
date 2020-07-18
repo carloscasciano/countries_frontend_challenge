@@ -17,7 +17,6 @@ export default function MainDashboard() {
 
   return (
     <div>
-      <p>Main Dashboard here</p>
       {countriesStatusData.isFetching === false &&
       countriesStatusData.isValid === false ? (
         <p>deu ruim</p>

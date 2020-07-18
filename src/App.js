@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import store from "./reduxLogic/store/store";
 import { getCountriesData } from "./dataRequests/getCountriesData";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import GlobalStyle from "./styles/global";
 
 function App() {
   useEffect(() => {
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <Provider store={store}>
+      <GlobalStyle />
       <Router>
         <Switch>
           <Route path="/:name">

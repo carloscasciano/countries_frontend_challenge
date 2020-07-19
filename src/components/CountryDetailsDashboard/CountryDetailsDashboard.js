@@ -4,8 +4,9 @@ import { useParams, Link } from "react-router-dom";
 import store from "../../reduxLogic/store/store";
 import CountryDetails from "./CountryDetails";
 import MapDetails from "./MapDetails/MapDetails";
+import NameFlagDomain from "./NameFlagDomain";
 import { CountryDetailsMainContainer } from "./countryDetailsDashboardStyles";
-import Typography from "@material-ui/core/Typography";
+
 import KeyboardReturnIcon from "@material-ui/icons/KeyboardReturn";
 
 export default function CountryDetailsDashbord() {
@@ -18,24 +19,10 @@ export default function CountryDetailsDashbord() {
   return (
     <CountryDetailsMainContainer>
       {countriesAppData.map((country) => (
+        
         <div key={country._id} className="details-card">
-          <div className="country-title">
-            <Typography variant="h2" align="center">
-              {country.name}
-            </Typography>
-          </div>
-
-          <img
-            className="img-container"
-            src={country.flag.svgFile}
-            alt={country.name}
-          />
-          <div className="domain-container ">
-            <Typography variant="body1">www.mydomain</Typography>
-            <Typography variant="h5">
-              {country.topLevelDomains[0].name}
-            </Typography>
-          </div>
+          <NameFlagDomain country={country}/>
+          
           <div className="info-container ">
             <CountryDetails country={country} />
             <MapDetails country={country} />

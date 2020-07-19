@@ -20,7 +20,10 @@ export default function MainDashboard() {
     <MainDashboardContainer>
       {countriesStatusData.isFetching === false &&
       countriesStatusData.isValid === false ? (
-        <p>deu ruim</p>
+        <p>
+          Something went wrong, try again later or contact me at
+          carlos.casciano@gmail.com
+        </p>
       ) : countriesStatusData.isFetching === true &&
         countriesStatusData.isValid === false ? (
         <p>Loading App...</p>
@@ -32,21 +35,14 @@ export default function MainDashboard() {
             userSearchInput={userSearchInput}
           />
           <div className="cards-container">
-          {countriesAppData
-            .filter((country) => country.name.includes(userSearchInput))
-            .map((country) => (
-              <CountryBasicInfoCard key={country._id} countryData={country} />
-            ))}
+            {countriesAppData
+              .filter((country) => country.name.includes(userSearchInput))
+              .map((country) => (
+                <CountryBasicInfoCard key={country._id} countryData={country} />
+              ))}
           </div>
-          
         </>
       ) : null}
     </MainDashboardContainer>
   );
 }
-
-/* 
-countriesAppData.map((country) => (
-    <div key={country._id}>
-      <CountryBasicInfoCard countryData={country} />
-    </div> */

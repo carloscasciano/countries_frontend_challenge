@@ -2,7 +2,6 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 
 export default function NameFlagDomain({ country }) {
-    console.log(country.topLevelDomains)
   return (
     <>
       <div className="country-title">

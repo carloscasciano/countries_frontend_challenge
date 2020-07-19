@@ -11,5 +11,9 @@ export function fetchSuccess(data) {
 }
 
 export function changeCountryData(country, newData) {
-  return { type: "CHANGE_COUNTRY_INFO", countryName: country, data: newData }
+  return {
+    type: "CHANGE_COUNTRY_INFO",
+    countryName: country,
+    data: newData,
+  };
 }

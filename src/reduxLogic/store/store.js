@@ -28,7 +28,6 @@ function countriesReducer(state = INITIAL_STATE, action) {
       filteredCountry[0].capital = action.data.capital
       filteredCountry[0].area = action.data.area
       filteredCountry[0].population = action.data.population
-      console.log(filteredCountry)
       return state
 
     default:

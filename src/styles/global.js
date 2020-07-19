@@ -15,4 +15,8 @@ export default createGlobalStyle`
         font: 15px 'Roboto', sans-serif;
         font-weight: 300;        
     }
+    a {
+        text-decoration: none;
+        color: #242424;
+    }
 `;

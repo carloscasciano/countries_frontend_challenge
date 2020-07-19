@@ -5,11 +5,7 @@ export const CountryDetailsMainContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
-  .area-organizer{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
+
 
   .details-card {
     margin-top: 40px;
@@ -51,6 +47,14 @@ export const CountryDetailsMainContainer = styled.div`
     display: flex;
     justify-content: space-between;
   }
-
-
 `;
+
+export const CountryDetailsFormContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  button {
+    margin: 0 0 10px 0;
+  }
+`

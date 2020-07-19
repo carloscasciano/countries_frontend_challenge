@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import store from "../../reduxLogic/store/store";
 import SearchBar from "./SearchBar";
-import CountryBasicInfoCard from "../CountryBasicInfoCard/CountryBasicInfoCard";
-import { MainDashboardContainer } from "./mainDashboardStyles";
+import CountryBasicInfoCard from "./CountryBasicInfoCard";
+import { MainDashboardContainer } from "./styles/mainDashboardStyles";
 
 export default function MainDashboard() {
   const countriesStatusData = useSelector((state) => state, [store]);

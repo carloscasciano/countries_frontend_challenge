@@ -5,17 +5,15 @@ import {
   Geography,
   Marker,
 } from "react-simple-maps";
-import store from "../../../../reduxLogic/store/store";
+import store from "../../../reduxLogic/store/store";
 import { useSelector } from "react-redux";
-import { mapsColors } from "../../../../styles/mapsColors";
+import { mapsColors } from "../../../globalStyles/mapsColors";
 
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
 export default function Map({ latitude, longitude, neighbours, area }) {
-  console.log(neighbours);
   const countriesStatusData = useSelector((state) => state, [store]);
-  console.log(countriesStatusData.countriesData);
   return (
     <ComposableMap
       projection="geoAzimuthalEqualArea"

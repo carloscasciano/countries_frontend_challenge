@@ -2,10 +2,11 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { useParams, Link } from "react-router-dom";
 import store from "../../reduxLogic/store/store";
-import CountryDetails from "./CountryDetails/CountryDetails";
-import MapDetails from './MapDetails/MapDetails'
+import CountryDetails from "./CountryDetails";
+import MapDetails from "./MapDetails/MapDetails";
 import { CountryDetailsMainContainer } from "./countryDetailsDashboardStyles";
 import Typography from "@material-ui/core/Typography";
+import KeyboardReturnIcon from "@material-ui/icons/KeyboardReturn";
 
 export default function CountryDetailsDashbord() {
   const selectedCountryName = useParams().name;
@@ -18,9 +19,12 @@ export default function CountryDetailsDashbord() {
     <CountryDetailsMainContainer>
       {countriesAppData.map((country) => (
         <div key={country._id} className="details-card">
-          <Typography variant="h2" gutterBottom>
-            {country.name}
-          </Typography>
+          <div className="country-title">
+            <Typography variant="h2" align="center">
+              {country.name}
+            </Typography>
+          </div>
+
           <img
             className="img-container"
             src={country.flag.svgFile}
@@ -32,14 +36,13 @@ export default function CountryDetailsDashbord() {
               {country.topLevelDomains[0].name}
             </Typography>
           </div>
-          <CountryDetails country={country} />
-          <MapDetails country={country}/>
-          
+          <div className="info-container ">
+            <CountryDetails country={country} />
+            <MapDetails country={country} />
+          </div>
 
           <Link to="/">
-            <Typography variant="body1" gutterBottom>
-              VOLTAR
-            </Typography>
+            <KeyboardReturnIcon fontSize="large"/>
           </Link>
         </div>
       ))}

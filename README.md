@@ -1,17 +1,18 @@
 #### Softplan Frontend Challenge - Countries Information
+countries_frontend_challenge
 
 ##### Structure
 
 - axios calls graphql api
-    - decision on over vs. underfetching
 - handles first store input
 -  dashboard component checks store current state to choose render
 
 
-
-
 ##### Briefing
+##### Decisions
+over vs. underfetching
+save on client side, used state, could have used local storage or cache
 ##### GIFS
-##### Extras# countries_frontend_challenge
-##### Design: Material UI
+##### Extras
+##### Design: Material UI / Styled Components / React Easy maps
 

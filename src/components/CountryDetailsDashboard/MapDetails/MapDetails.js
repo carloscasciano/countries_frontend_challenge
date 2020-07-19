@@ -1,38 +1,38 @@
 import React from "react";
-import Map from "./Map/Map";
+import Map from "./Map";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
-import { mapsColors } from "../../../styles/mapsColors";
-console.log(mapsColors);
+import { mapsColors } from "../../../globalStyles/mapsColors";
+import { MapComponentContainer } from "./mapStyles";
 
 export default function MapDetails({ country }) {
   return (
-    <div>
-      <div>
-        <Map
-          latitude={country.location.latitude}
-          longitude={country.location.longitude}
-          neighbours={country.distanceToOtherCountries}
-          area={country.area}
-        />
-        {country.distanceToOtherCountries.map((neighbour, index) => (
-          <div key={Math.random()} className="country-distance">
+    <MapComponentContainer>
+      <Map
+        latitude={country.location.latitude}
+        longitude={country.location.longitude}
+        neighbours={country.distanceToOtherCountries}
+        area={country.area}
+      />
+      {country.distanceToOtherCountries.map((neighbour, index) => (
+        <div key={Math.random()} className="country-distance">
+          <div className="neighbours-container">
             <Link to={neighbour.countryName}>
-              <Typography variant="body1" gutterBottom>
+              <Typography variant="subtitle1" gutterBottom>
                 {neighbour.countryName}
               </Typography>
             </Link>
 
             <Typography
-              variant="body2"
+              variant="h6"
               gutterBottom
               style={{ color: mapsColors.neighbourColors[index] }}
             >
               {Math.round(neighbour.distanceInKm)} km
             </Typography>
           </div>
-        ))}
-      </div>
-    </div>
+        </div>
+      ))}
+    </MapComponentContainer>
   );
 }

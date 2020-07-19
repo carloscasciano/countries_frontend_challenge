@@ -1,5 +1,5 @@
 import React from "react";
-import { SearchBarContainer } from "./mainDashboardStyles";
+import { SearchBarContainer } from "./styles/mainDashboardStyles";
 import TextField from "@material-ui/core/TextField";
 
 export default function SearchBar({ handleUserSearchText, userSearchInput }) {

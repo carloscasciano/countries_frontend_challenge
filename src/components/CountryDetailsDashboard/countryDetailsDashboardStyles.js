@@ -5,13 +5,22 @@ export const CountryDetailsMainContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
-
-
   .details-card {
     margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .country-title {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    h2{
+      justify-self: center;
+    }
   }
 
   .img-container {
@@ -35,24 +44,25 @@ export const CountryDetailsMainContainer = styled.div`
     align-items: flex-end;
   }
 
-  .map-distance {
+  .info-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     align-items: flex-start;
-  }
 
-  .country-distance{
-    margin: 0 0 0 30px;
-    width: 200px;
-    display: flex;
-    justify-content: space-between;
+    @media (max-width: 600px) { 
+      flex-direction: column;
+    }
+    
   }
 `;
 
 export const CountryDetailsFormContainer = styled.div`
+  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 15px;
 
   button {
     margin: 0 0 10px 0;

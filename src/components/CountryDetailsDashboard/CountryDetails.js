@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import store from "../../../reduxLogic/store/store";
-import { changeCountryData } from "../../../reduxLogic/actions/actions";
-import { CountryDetailsFormContainer } from "../countryDetailsDashboardStyles";
+import store from "../../reduxLogic/store/store";
+import { changeCountryData } from "../../reduxLogic/actions/actions";
+import { CountryDetailsFormContainer } from "./countryDetailsDashboardStyles";
 
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
@@ -32,37 +32,6 @@ export default function CountryDetails({ country }) {
 
   return (
     <CountryDetailsFormContainer>
-      {!editInfoToggle ? (
-        <Button
-          onClick={() => {
-            setEditInfoToggle(true);
-            handleEditCommand(
-              country.capital,
-              country.area,
-              country.population
-            );
-          }}
-        >
-          Change the World!
-        </Button>
-      ) : (
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={() => {
-            setEditInfoToggle(false);
-            store.dispatch(
-              changeCountryData(country.name, {
-                capital: userCapitalInput,
-                area: userAreaInput,
-                population: userPopulationInput,
-              })
-            );
-          }}
-        >
-          Save
-        </Button>
-      )}
       <TextField
         InputProps={{
           readOnly: !editInfoToggle,
@@ -95,7 +64,39 @@ export default function CountryDetails({ country }) {
         style={{ marginBottom: "15px" }}
         onChange={handleUserPopulation}
       />
+      {!editInfoToggle ? (
+        <Button
+          variant="outlined"
+          color="primary"
+          onClick={() => {
+            setEditInfoToggle(true);
+            handleEditCommand(
+              country.capital,
+              country.area,
+              country.population
+            );
+          }}
+        >
+          Edit Information
+        </Button>
+      ) : (
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => {
+            setEditInfoToggle(false);
+            store.dispatch(
+              changeCountryData(country.name, {
+                capital: userCapitalInput,
+                area: userAreaInput,
+                population: userPopulationInput,
+              })
+            );
+          }}
+        >
+          Save
+        </Button>
+      )}
     </CountryDetailsFormContainer>
   );
 }
-

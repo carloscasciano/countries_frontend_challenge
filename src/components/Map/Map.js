@@ -24,14 +24,14 @@ export default function Map({ latitude, longitude }) {
             <Geography
               key={geo.rsmKey}
               geography={geo}
-              fill="#9998A3"
+              fill="#242424"
               stroke="#EAEAEC"
             />
           ))
         }
       </Geographies>
       <Marker coordinates={[longitude, latitude]}>
-        <circle r={16} fill="#c66" />
+        <circle r={16} fill="#f66" />
       </Marker>
     </ComposableMap>
   );

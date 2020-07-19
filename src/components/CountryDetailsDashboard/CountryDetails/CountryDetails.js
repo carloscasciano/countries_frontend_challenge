@@ -43,7 +43,7 @@ export default function CountryDetails({ country }) {
             );
           }}
         >
-          Edit
+          Change the World!
         </Button>
       ) : (
         <Button
@@ -99,26 +99,3 @@ export default function CountryDetails({ country }) {
   );
 }
 
-
-
-/* 
-              <div className="map-distance">
-                <Map
-                  latitude={country.location.latitude}
-                  longitude={country.location.longitude}
-                />
-                {country.distanceToOtherCountries.map((neighbour) => (
-                  <div key={Math.random()} className="country-distance">
-                    <Link to={neighbour.countryName}>
-                      <Typography variant="body1" gutterBottom>
-                        {neighbour.countryName}
-                      </Typography>
-                    </Link>
-
-                    <Typography variant="body2" gutterBottom>
-                      {Math.round(neighbour.distanceInKm)} km
-                    </Typography>
-                  </div>
-                ))}
-              </div>
-               */

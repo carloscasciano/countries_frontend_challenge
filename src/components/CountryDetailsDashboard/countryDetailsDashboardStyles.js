@@ -17,7 +17,7 @@ export const CountryDetailsMainContainer = styled.div`
   .img-container {
     width: 200px;
     box-shadow: 0px 0px 10px #ccc;
-    margin: 0 0 30px 0;
+    margin: 0 0 15px 0;
   }
 
   .form-container {
@@ -28,7 +28,7 @@ export const CountryDetailsMainContainer = styled.div`
   }
 
   .domain-container {
-    margin-top: 10px;
+    
     display: flex;
     flex-direction: row;
     justify-content: center;

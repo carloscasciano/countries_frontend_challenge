@@ -27,6 +27,7 @@ async function getCountriesData() {
                     name
                 }
                 location {
+                  
                   longitude
                   latitude
                 }

@@ -1,18 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { BasicCardContainer } from "./countryBasicCardStyles";
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 export default function CountryBasicInfoCard({ countryData }) {
   return (
-    <div style={{ display: "flex" }}>
-      <img
-        src={countryData.flag.svgFile}
-        style={{ height: "28px", width: "35px" }}
-        alt={countryData.name}
-      />
-      <p>{countryData.name}</p>
-      <p>{countryData.capital}</p>
-      <Link to={countryData.name}>Details</Link>
-
-    </div>
+    <BasicCardContainer>
+      <div className="flag-container">
+        <img src={countryData.flag.svgFile} alt={countryData.name} />
+      </div>
+      <div className="basic-info">
+        <p className="country">{countryData.name}</p>
+        <p>{countryData.capital}</p>
+      </div>
+      <div className="details-icon">
+        <Link to={countryData.name}>
+          <NavigateNextIcon />
+        </Link>
+      </div>
+    </BasicCardContainer>
   );
 }

@@ -1,9 +1,11 @@
 import React from "react";
+import { SearchBarContainer } from "./mainDashboardStyles";
+import TextField from '@material-ui/core/TextField'
 
 export default function SearchBar({ handleUserSearchText, userSearchInput }) {
   return (
-    <div>
-      <input onChange={handleUserSearchText} value={userSearchInput} />
-    </div>
+    <SearchBarContainer>
+      <TextField onChange={handleUserSearchText} value={userSearchInput} label="Search a Country"/>
+    </SearchBarContainer>
   );
 }

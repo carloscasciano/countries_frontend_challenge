@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import store from "../../reduxLogic/store/store";
 import SearchBar from "./SearchBar";
 import CountryBasicInfoCard from "../CountryBasicInfoCard/CountryBasicInfoCard";
+import { MainDashboardContainer } from "./mainDashboardStyles";
 
 export default function MainDashboard() {
   const countriesStatusData = useSelector((state) => state, [store]);
@@ -16,7 +17,7 @@ export default function MainDashboard() {
   };
 
   return (
-    <div>
+    <MainDashboardContainer>
       {countriesStatusData.isFetching === false &&
       countriesStatusData.isValid === false ? (
         <p>deu ruim</p>
@@ -30,14 +31,17 @@ export default function MainDashboard() {
             handleUserSearchText={handleUserSearchText}
             userSearchInput={userSearchInput}
           />
+          <div className="cards-container">
           {countriesAppData
             .filter((country) => country.name.includes(userSearchInput))
             .map((country) => (
               <CountryBasicInfoCard key={country._id} countryData={country} />
             ))}
+          </div>
+          
         </>
       ) : null}
-    </div>
+    </MainDashboardContainer>
   );
 }
 

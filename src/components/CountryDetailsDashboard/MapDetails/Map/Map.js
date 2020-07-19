@@ -12,7 +12,7 @@ import { mapsColors } from "../../../../styles/mapsColors";
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
-export default function Map({ latitude, longitude, neighbours }) {
+export default function Map({ latitude, longitude, neighbours, area }) {
   console.log(neighbours);
   const countriesStatusData = useSelector((state) => state, [store]);
   console.log(countriesStatusData.countriesData);
@@ -21,7 +21,7 @@ export default function Map({ latitude, longitude, neighbours }) {
       projection="geoAzimuthalEqualArea"
       projectionConfig={{
         rotate: [longitude * -1, latitude * -1, 0],
-        scale: 500,
+        scale: area > 1000000 ? 700 : area < 50000 ? 2000 : 1200,
       }}
     >
       <Geographies geography={geoUrl}>

@@ -13,6 +13,7 @@ export default function MapDetails({ country }) {
           latitude={country.location.latitude}
           longitude={country.location.longitude}
           neighbours={country.distanceToOtherCountries}
+          area={country.area}
         />
         {country.distanceToOtherCountries.map((neighbour, index) => (
           <div key={Math.random()} className="country-distance">

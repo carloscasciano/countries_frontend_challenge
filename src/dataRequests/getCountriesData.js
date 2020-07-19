@@ -26,6 +26,10 @@ async function getCountriesData() {
                 topLevelDomains {
                     name
                 }
+                location {
+                  longitude
+                  latitude
+                }
                 distanceToOtherCountries(first: 5) {
                     distanceInKm
                     countryName

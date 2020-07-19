@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { BasicCardContainer } from "./styles/countryBasicCardStyles";
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import NavigateNextIcon from "@material-ui/icons/NavigateNext";
 
 export default function CountryBasicInfoCard({ countryData }) {
   return (

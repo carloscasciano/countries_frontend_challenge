@@ -24,11 +24,13 @@ function countriesReducer(state = INITIAL_STATE, action) {
       return state;
 
     case "CHANGE_COUNTRY_INFO":
-      const filteredCountry = state.countriesData.filter(c=>c.name === action.countryName)
-      filteredCountry[0].capital = action.data.capital
-      filteredCountry[0].area = action.data.area
-      filteredCountry[0].population = action.data.population
-      return state
+      const filteredCountry = state.countriesData.filter(
+        (c) => c.name === action.countryName
+      );
+      filteredCountry[0].capital = action.data.capital;
+      filteredCountry[0].area = action.data.area;
+      filteredCountry[0].population = action.data.population;
+      return state;
 
     default:
       return state;

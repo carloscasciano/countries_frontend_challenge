@@ -18,7 +18,7 @@ export const CountryDetailsMainContainer = styled.div`
     justify-content: center;
     align-items: center;
     margin-bottom: 15px;
-    h2{
+    h2 {
       justify-self: center;
     }
   }
@@ -37,7 +37,6 @@ export const CountryDetailsMainContainer = styled.div`
   }
 
   .domain-container {
-    
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -50,10 +49,9 @@ export const CountryDetailsMainContainer = styled.div`
     justify-content: center;
     align-items: flex-start;
 
-    @media (max-width: 600px) { 
+    @media (max-width: 600px) {
       flex-direction: column;
     }
-    
   }
 `;
 
@@ -67,4 +65,4 @@ export const CountryDetailsFormContainer = styled.div`
   button {
     margin: 0 0 10px 0;
   }
-`
+`;

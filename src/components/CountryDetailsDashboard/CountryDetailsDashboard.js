@@ -19,17 +19,16 @@ export default function CountryDetailsDashbord() {
   return (
     <CountryDetailsMainContainer>
       {countriesAppData.map((country) => (
-        
         <div key={country._id} className="details-card">
-          <NameFlagDomain country={country}/>
-          
+          <NameFlagDomain country={country} />
+
           <div className="info-container ">
             <CountryDetails country={country} />
             <MapDetails country={country} />
           </div>
 
           <Link to="/">
-            <KeyboardReturnIcon fontSize="large"/>
+            <KeyboardReturnIcon fontSize="large" />
           </Link>
         </div>
       ))}

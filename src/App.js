@@ -7,7 +7,6 @@ import { getCountriesData } from "./dataRequests/getCountriesData";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import GlobalStyle from "./globalStyles/global";
 
-
 function App() {
   useEffect(() => {
     getCountriesData();

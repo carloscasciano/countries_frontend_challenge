@@ -47,6 +47,7 @@ async function getCountriesData() {
     .then((result) => {
       /* console.log("completed"); */
       store.dispatch(fetchSuccess(result.data.data.Country));
+      return 'success'
     });
 }
 

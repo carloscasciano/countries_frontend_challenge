@@ -34,7 +34,7 @@ export default function MainDashboard() {
             handleUserSearchText={handleUserSearchText}
             userSearchInput={userSearchInput}
           />
-          <div className="cards-container">
+          <div className="cards-container" >
             {countriesAppData
               .filter((country) => country.name.includes(userSearchInput))
               .map((country) => (

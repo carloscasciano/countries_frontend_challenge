@@ -20,7 +20,6 @@ describe("Fetching Data", () => {
   test("store identifies fetching from useState", () => {
     const currentStore = store;
     expect(currentStore.getState().isFetching).toBe(true);
-    console.log(currentStore.getState());
     screen.debug();
   });
 
@@ -30,7 +29,6 @@ describe("Fetching Data", () => {
       await waitForElementToBeRemoved(() => getByText("Loading App..."))
       const currentStore = store;
       expect(currentStore.getState().isValid).toBe(true);
-      console.log(currentStore.getState().isValid);
     });
   });
 });

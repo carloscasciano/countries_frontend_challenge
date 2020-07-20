@@ -35,6 +35,7 @@ export default function CountryDetails({ country }) {
       <TextField
         InputProps={{
           readOnly: !editInfoToggle,
+          color: "primary",
         }}
         label="Capital"
         variant={editInfoToggle ? "outlined" : "standard"}

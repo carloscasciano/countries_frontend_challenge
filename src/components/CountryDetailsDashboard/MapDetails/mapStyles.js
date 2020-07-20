@@ -9,9 +9,11 @@ export const MapComponentContainer = styled.div`
   margin: 15px 0 15px 15px;
 
   .neighbours-container {
-    width: 300px;
+    width: 350px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 3px 15px 3px 15px;
+
   }
 `;

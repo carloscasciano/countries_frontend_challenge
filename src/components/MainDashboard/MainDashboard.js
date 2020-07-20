@@ -21,8 +21,7 @@ export default function MainDashboard() {
       {countriesStatusData.isFetching === false &&
       countriesStatusData.isValid === false ? (
         <p>
-          Something went REALLY wrong, try again later or contact me at
-          carlos.casciano@gmail.com
+          Something went REALLY wrong, refresh or try again later.
         </p>
       ) : countriesStatusData.isFetching === true &&
         countriesStatusData.isValid === false ? (

@@ -18,13 +18,13 @@ export default function MapDetails({ country }) {
         <div key={Math.random()} className="country-distance">
           <div className="neighbours-container">
             <Link to={neighbour.countryName}>
-              <Typography variant="subtitle1" gutterBottom>
+              <Typography variant="subtitle2" gutterBottom>
                 {neighbour.countryName}
               </Typography>
             </Link>
 
             <Typography
-              variant="h6"
+              variant="subtitle1"
               gutterBottom
               style={{ color: mapsColors.neighbourColors[index] }}
             >

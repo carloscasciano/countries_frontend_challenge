@@ -1,4 +1,4 @@
 export const mapsColors = {
-  mainCountryColor: "#ABD904",
-  neighbourColors: ["#206491", "#45AAB4", "#FE7A66", "#FBB45C", "#F9637C"],
+  mainCountryColor: "#00AA00",
+  neighbourColors: ["#F62459", "#7462E0", "#FF00FF", "#AF851A", "#0000B5"],
 };

@@ -2,10 +2,14 @@
 
 This is an app built for SoftPlan Frontend Challenge.
 
-Demo:
-Code:
+[Demo](https://ccasci-countries-challenge.netlify.app/)
+[Code](https://github.com/carloscasciano/countries_frontend_challenge)
 
 ##### Gifs
+
+![App](https://media.giphy.com/media/lnPfpbN3JNUocUhGfV/giphy.gif)
+
+![Changing Data](https://media.giphy.com/media/UShp6QvbgkimRxUYuN/giphy.gif)
 
 ##### Briefing
 [X] Create a cards list showing each Country, flag and Capital

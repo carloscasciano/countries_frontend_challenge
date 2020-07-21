@@ -10,7 +10,8 @@ This is an app built for SoftPlan Frontend Challenge.
 
 **App:**
 
-<img src="https://media.giphy.com/media/W4zibecCZIEm4segNN/giphy.gif" width="1000" />
+![App](https://media.giphy.com/media/W4zibecCZIEm4segNN/giphy.gif )
+
 
 **Changing Data:**
 

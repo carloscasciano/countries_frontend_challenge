@@ -10,11 +10,11 @@ This is an app built for SoftPlan Frontend Challenge.
 
 **App:**
 
-![App](https://media.giphy.com/media/W4zibecCZIEm4segNN/giphy.gif =400x)
+<img src="https://media.giphy.com/media/W4zibecCZIEm4segNN/giphy.gif" width="500" />
 
 **Changing Data:**
 
-![Changing Data](https://media.giphy.com/media/Q4mSdJpdGfPcoG3cyh/giphy.gif =400x)
+![Changing Data](https://media.giphy.com/media/Q4mSdJpdGfPcoG3cyh/giphy.gif )
 
 ### Briefing
 - [X] Create a cards list showing each Country, flag and Capital from GraphQL API
